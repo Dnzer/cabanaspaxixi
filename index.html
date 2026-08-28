@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cabanas Paxixi — refúgios românticos aos pés do Morro do Paxixi, em Camisão, Aquidauana - MS.">
+  <title>Cabanas Paxixi | Uma experiência de luxo longe de casa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><img src="assets/logo.png" alt="Cabanas Paxixi"><span>Cabanas<br>Paxixi</span></a>
+    <button class="menu" aria-label="Abrir menu">☰</button>
+    <nav>
+      <a href="#inicio">INÍCIO</a><a href="#cabanas">CABANAS</a><a href="#sobre">SOBRE NÓS</a><a class="nav-reserve" href="#reservas">RESERVAS</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-copy"><p class="eyebrow">B O A S - V I N D A S  A</p><h1>Cabanas<br><span>Paxixi</span></h1><p class="hero-sub">Um refúgio romântico aos pés do Morro do Paxixi.</p><a href="#reservas" class="btn light">VER DISPONIBILIDADE</a></div>
+    </section>
+
+    <section class="intro section">
+      <div class="intro-image"><img src="assets/hero-cabana.jpeg" alt="Cabana Paxixi em meio à natureza"></div>
+      <div class="intro-text"><span class="kicker">C A M I S Ã O · M S</span><h2>Uma pausa para viver o que realmente importa.</h2><p>As Cabanas Paxixi são refúgios românticos localizados aos pés do Morro do Paxixi, em Camisão, Aquidauana — Mato Grosso do Sul.</p><p>Um lugar para desacelerar, celebrar a dois e transformar uma simples hospedagem em uma experiência inesquecível.</p><a href="#sobre" class="text-link">Conheça nossa experiência →</a></div>
+    </section>
+
+    <section id="sobre" class="experience section">
+      <div class="experience-heading"><span class="kicker">A EXPERIÊNCIA</span><h2>Aproveite uma experiência de luxo<br>longe de casa</h2></div>
+      <div class="experience-grid"><img src="assets/experiencia.jpeg" alt="Detalhes acolhedores da cabana"><div class="experience-copy"><p>Natureza, privacidade e conforto em um cenário especial da Serra de Maracaju.</p><div class="amenities"><div><b>♡</b><span>Refúgio<br>romântico</span></div><div><b>♨</b><span>Banheira /<br>ofurô</span></div><div><b>⌂</b><span>Cozinha<br>equipada</span></div><div><b>✦</b><span>Vista<br>panorâmica</span></div></div></div></div>
+    </section>
+
+    <section id="cabanas" class="cabins section">
+      <div class="section-title"><span class="kicker">HOSPEDAGEM</span><h2>Cabanas</h2><p>Escolha seu refúgio e consulte as datas disponíveis.</p></div>
+      <div id="cabinGrid" class="cabin-grid"></div>
+    </section>
+
+    <section id="reservas" class="booking section">
+      <div class="section-title"><span class="kicker">RESERVAS</span><h2>Encontre sua data</h2><p>Veja em tempo real quais cabanas estão livres e solicite sua reserva.</p></div>
+      <div class="booking-layout">
+        <div class="calendar-panel">
+          <div class="calendar-toolbar"><button id="prevMonth" aria-label="Mês anterior">‹</button><h3 id="monthTitle"></h3><button id="nextMonth" aria-label="Próximo mês">›</button></div>
+          <div class="legend"><span><i class="available"></i> Disponível</span><span><i class="occupied"></i> Ocupada</span><span><i class="selected"></i> Selecionada</span></div>
+          <div id="calendar" class="calendar"></div>
+          <div class="availability-list" id="availabilityList"></div>
+        </div>
+        <form id="bookingForm" class="booking-form">
+          <h3>Solicitar reserva</h3>
+          <label>Cabana<select id="cabinSelect" name="cabin" required></select></label>
+          <div class="date-row"><label>Check-in<input id="checkIn" name="checkIn" type="date" required></label><label>Check-out<input id="checkOut" name="checkOut" type="date" required></label></div>
+          <label>Hóspedes<select name="guests"><option>2</option><option>3</option><option>4</option></select></label>
+          <label>Nome completo<input name="name" required placeholder="Seu nome"></label>
+          <label>E-mail<input name="email" type="email" required placeholder="voce@email.com"></label>
+          <label>WhatsApp<input name="phone" required placeholder="(67) 99999-9999"></label>
+          <button class="btn" type="submit">CONFIRMAR RESERVA</button>
+          <p id="formMessage" class="form-message" role="status"></p>
+          <small>Ao confirmar, a estadia é registrada no calendário compartilhado. Para uma operação comercial completa, recomenda-se integrar pagamento e painel administrativo.</small>
+        </form>
+      </div>
+    </section>
+
+    <section class="location section">
+      <div><span class="kicker">AO REDOR</span><h2>Entre montanhas,<br>silêncio e natureza.</h2><p>Camisão, MS, próximo à Serra de Maracaju e aos mirantes da região. O cenário perfeito para descansar e aproveitar o tempo a dois.</p></div>
+      <div class="location-card"><span>CAMISÃO · AQUIDAUANA · MS</span><strong>Morro do<br>Paxixi</strong><a href="#reservas" class="btn light">PLANEJAR ESTADIA</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid"><div><h3>Reservas</h3><p>Atendimento para reservas e informações.</p><a href="#reservas">Consultar disponibilidade →</a></div><div><h3>Localização</h3><p>Camisão, Aquidauana<br>Mato Grosso do Sul, Brasil</p></div><div><h3>Siga-nos</h3><a href="https://www.instagram.com/cabanaspaxixi/" target="_blank" rel="noreferrer">Instagram</a><p>Marque a gente nas redes!</p></div></div><div class="copyright">© <span id="year"></span> Cabanas Paxixi · Todos os direitos reservados.</div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
